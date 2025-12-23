@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import WyrmTitle from './WyrmTitle';
 import { FaCode, FaLaptopCode, FaShieldAlt, FaJava, FaReact, FaNodeJs, FaAws, FaLinux, FaGitAlt, FaDocker, FaMicrosoft } from 'react-icons/fa';
-import { SiTypescript, SiJavascript, SiKotlin, SiRust, SiC, SiCplusplus, SiPython, SiNextdotjs, SiRedux, SiExpress, SiGraphql, SiTailwindcss, SiPostgresql, SiMysql, SiMongodb, SiPrisma, SiSqlite, SiRedis, SiKubernetes, SiSocketdotio } from 'react-icons/si';
+import { SiJavascript, SiC, SiCplusplus, SiPython, SiNextdotjs, SiRedux, SiExpress, SiGraphql, SiTailwindcss, SiPostgresql, SiMysql, SiMongodb, SiPrisma, SiSqlite, SiRedis, SiKubernetes, SiSocketdotio } from 'react-icons/si';
 
 const container = {
     hidden: { opacity: 0 },
@@ -61,11 +61,8 @@ const expertise = [
 
 const techStacks = {
     languages: [
-        { icon: SiTypescript, name: "TypeScript", color: "#3178C6" },
         { icon: SiJavascript, name: "JavaScript", color: "#F7DF1E" },
-        { icon: SiKotlin, name: "Kotlin", color: "#7F52FF" },
         { icon: FaJava, name: "Java", color: "#007396" },
-        { icon: SiRust, name: "Rust", color: "#000000" },
         { icon: SiC, name: "C", color: "#A8B9CC" },
         { icon: SiCplusplus, name: "C++", color: "#00599C" },
         { icon: SiPython, name: "Python", color: "#3776AB" }
