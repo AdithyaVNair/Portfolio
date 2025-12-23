@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Lenis from 'lenis';
 import Hero from './components/Hero';
+import About from './components/About';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
@@ -93,16 +94,19 @@ function App() {
             top: 0,
             left: 0,
             width: '100%',
-            padding: '0.8rem 5%', // Reduced padding for smaller height
+            padding: '0.8rem 5%',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             zIndex: 1000,
-            backgroundColor: 'rgba(255, 255, 255, 0.7)', // Glassy White
-            backdropFilter: 'blur(20px) saturate(180%)', // Acrylic blur
+            backgroundColor: 'rgba(2, 12, 27, 0.7)', // Darker glassy background to match new theme
+            backdropFilter: 'blur(20px) saturate(180%)',
             WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-            borderBottom: '1px solid rgba(0, 0, 0, 0.05)', // Subtle dark border
-            color: '#000' // Dark text
+            borderBottom: '1px solid rgba(100, 255, 218, 0.05)',
+            color: 'var(--text-primary)', // Light text
+            opacity: scrollYProgress.get() > 0.1 ? 1 : 0, // Fade in as we scroll away from hero
+            pointerEvents: scrollYProgress.get() > 0.1 ? 'auto' : 'none',
+            transition: 'opacity 0.3s ease'
           }}>
             <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
               AVN<span style={{ color: 'var(--accent-primary)' }}>.</span>
@@ -117,6 +121,7 @@ function App() {
 
           <main>
             <Hero />
+            <About />
             <Skills />
             <Experience />
             <Projects />
