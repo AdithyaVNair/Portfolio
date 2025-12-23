@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import WyrmTitle from './WyrmTitle';
 import { FaCode, FaLaptopCode, FaShieldAlt, FaJava, FaReact, FaNodeJs, FaAws, FaLinux, FaGitAlt, FaDocker, FaMicrosoft } from 'react-icons/fa';
-import { SiJavascript, SiC, SiCplusplus, SiPython, SiNextdotjs, SiRedux, SiExpress, SiGraphql, SiTailwindcss, SiPostgresql, SiMysql, SiMongodb, SiPrisma, SiSqlite, SiRedis, SiKubernetes, SiSocketdotio } from 'react-icons/si';
+import { SiJavascript, SiC, SiCplusplus, SiPython, SiRedux, SiExpress, SiTailwindcss, SiMysql, SiMongodb, SiSqlite, SiKubernetes } from 'react-icons/si';
 
 const container = {
     hidden: { opacity: 0 },
@@ -68,22 +68,16 @@ const techStacks = {
         { icon: SiPython, name: "Python", color: "#3776AB" }
     ],
     web: [
-        { icon: SiNextdotjs, name: "Next.js", color: "#ffffff" },
         { icon: FaReact, name: "React", color: "#61DAFB" },
         { icon: FaNodeJs, name: "Node.js", color: "#339933" },
         { icon: SiRedux, name: "Redux", color: "#764ABC" },
         { icon: SiExpress, name: "Express", color: "#ffffff" },
-        { icon: SiGraphql, name: "GraphQL", color: "#E10098" },
-        { icon: SiSocketdotio, name: "Socket.io", color: "#ffffff" },
         { icon: SiTailwindcss, name: "Tailwind", color: "#06B6D4" }
     ],
     databases: [
-        { icon: SiPostgresql, name: "PostgreSQL", color: "#4169E1" },
         { icon: SiMysql, name: "MySQL", color: "#4479A1" },
         { icon: SiMongodb, name: "MongoDB", color: "#47A248" },
-        { icon: SiPrisma, name: "Prisma", color: "#2D3748" },
-        { icon: SiSqlite, name: "SQLite", color: "#003B57" },
-        { icon: SiRedis, name: "Redis", color: "#DC382D" }
+        { icon: SiSqlite, name: "SQLite", color: "#003B57" }
     ],
     tools: [
         { icon: FaAws, name: "AWS", color: "#FF9900" },
