@@ -62,7 +62,7 @@ const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="hero-bio"
                 >
-                    I'm a passionate <span>Full Stack Developer</span> from India.
+                    I'm an <span>Aspiring DevOps Engineer</span> from India.
                 </motion.p>
 
                 <nav className="hero-nav">
