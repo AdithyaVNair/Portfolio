@@ -14,7 +14,7 @@ const projects = [
         title: "Latency Lens",
         desc: "Interactive, web-based CPU scheduling simulator. Visualizes FCFS, SJF, and Round-Robin algorithms with a responsive interface to demonstrate OS principles.",
         tech: ["HTML", "CSS", "JavaScript"],
-        links: { github: "#", demo: "#" }
+        links: { github: "https://adithyavnair.github.io/Latency-Lens/", demo: "https://adithyavnair.github.io/Latency-Lens/" }
     }
 ];
 

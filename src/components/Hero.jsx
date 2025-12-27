@@ -1,8 +1,47 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaLinkedinIn, FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Hero = () => {
+    const [text, setText] = useState('');
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [loopNum, setLoopNum] = useState(0);
+    const [typingSpeed, setTypingSpeed] = useState(150);
+
+    const toRotate = ["Aspiring DevOps Engineer", "Aspiring Cloud Analyst", "Aspiring Web Developer"];
+
+    useEffect(() => {
+        const handleType = () => {
+            const i = loopNum % toRotate.length;
+            const fullText = toRotate[i];
+
+            setText(isDeleting
+                ? fullText.substring(0, text.length - 1)
+                : fullText.substring(0, text.length + 1)
+            );
+
+            let nextSpeed = 50; // Super fast typing
+
+            if (isDeleting) {
+                nextSpeed = 25; // Blink-and-miss deletion
+            }
+
+            if (!isDeleting && text === fullText) {
+                nextSpeed = 1500; // Shorter pause to read
+                setIsDeleting(true);
+            } else if (isDeleting && text === '') {
+                setIsDeleting(false);
+                setLoopNum(loopNum + 1);
+                nextSpeed = 300; // Quick turnaround for next word
+            }
+
+            setTypingSpeed(nextSpeed);
+        };
+
+        const timer = setTimeout(handleType, typingSpeed);
+        return () => clearTimeout(timer);
+    }, [text, isDeleting, loopNum]);
+
     return (
         <section id="hero" className="hero-container">
             {/* Background Bars */}
@@ -61,8 +100,9 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="hero-bio"
+                    style={{ minHeight: '1.5em' }} /* Prevent layout shift */
                 >
-                    I'm an <span>Aspiring DevOps Engineer</span> from India.
+                    I'm an <span>{text}</span><span className="cursor">|</span>
                 </motion.p>
 
                 <nav className="hero-nav">
@@ -135,5 +175,4 @@ const Hero = () => {
         </section>
     );
 };
-
 export default Hero;

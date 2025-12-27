@@ -50,7 +50,7 @@ const About = () => {
                             </p>
                         </div>
 
-                        <h4 className="education-title">Education</h4>
+                  ps Engineer      <h4 className="education-title">Education</h4>
                         <div className="education-timeline">
                             {education.map((item, index) => (
                                 <motion.div
