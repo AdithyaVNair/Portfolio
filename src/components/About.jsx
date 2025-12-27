@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import aboutPhoto from '../assets/about_photo.jpg';
+import aboutPhoto from '../assets/hero_new.png';
 
 const education = [
     {
